@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" fx:id="pane_buscar_maquinista" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trenes.BuscarMaquinistaController">
+   <children>
+      <Label layoutX="232.0" layoutY="33.0" text="Buscar Maquinista">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="94.0" layoutY="75.0" text="Nombre">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtBuscar" layoutX="163.0" layoutY="73.0" prefHeight="25.0" prefWidth="165.0" promptText="introducir nombre del guía" />
+      <Label layoutX="167.0" layoutY="119.0" text="Nombre">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblNombre" disable="true" layoutX="286.0" layoutY="119.0" prefHeight="20.0" prefWidth="165.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblApPaterno" disable="true" layoutX="286.0" layoutY="159.0" prefHeight="20.0" prefWidth="165.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblCedula" disable="true" layoutX="286.0" layoutY="199.0" prefHeight="20.0" prefWidth="165.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblApMaterno" disable="true" layoutX="286.0" layoutY="243.0" prefHeight="20.0" prefWidth="165.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label fx:id="lblAntiguedad" disable="true" layoutX="286.0" layoutY="288.0" prefHeight="20.0" prefWidth="165.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="167.0" layoutY="159.0" text="Apellido Paterno">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="167.0" layoutY="199.0" text="Cedula">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="167.0" layoutY="243.0" text="Apellido Materno">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Label layoutX="167.0" layoutY="288.0" text="Antigüedad">
+         <font>
+            <Font size="14.0" />
+         </font>
+      </Label>
+      <Button layoutX="397.0" layoutY="73.0" mnemonicParsing="false" onAction="#Buscar" prefHeight="25.0" prefWidth="104.0" text="Buscar" />
+      <Button fx:id="btnInicio" layoutX="120.0" layoutY="341.0" mnemonicParsing="false" onAction="#moverRegistro" text="|&lt;" />
+      <Button fx:id="btnAtras" layoutX="159.0" layoutY="341.0" mnemonicParsing="false" onAction="#moverRegistro" text="&lt;&lt;" />
+      <Button fx:id="btnAdelante" layoutX="429.0" layoutY="341.0" mnemonicParsing="false" onAction="#moverRegistro" text="&gt;&gt;" />
+      <Button fx:id="btnUltimo" layoutX="473.0" layoutY="341.0" mnemonicParsing="false" onAction="#moverRegistro" text="&gt;|" />
+      <Label fx:id="lblIndice" layoutX="300.0" layoutY="345.0" text="0/0" />
+   </children>
+</AnchorPane>

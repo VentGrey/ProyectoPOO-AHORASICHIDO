@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="Border" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="trenes.FXMLDocumentController">
+   <top>
+      <MenuBar BorderPane.alignment="CENTER">
+        <menus>
+          <Menu mnemonicParsing="false" text="Archivo">
+            <items>
+              <MenuItem fx:id="btnGuardarMaquinista" mnemonicParsing="false" onAction="#guardar_maquinista" text="Guardar Maquinistas" />
+                  <MenuItem fx:id="btnAbrirMaquinista" mnemonicParsing="false" onAction="#abrir_maquinista" text="Abrir Maquinistas" />
+                  <MenuItem fx:id="btnGuardarTrenes" mnemonicParsing="false" onAction="#guardar_trenes" text="Guardar Trenes" />
+                  <MenuItem fx:id="btnAbrirTrenes" mnemonicParsing="false" onAction="#abrir_trenes" text="Abrir Trenes" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Dar de alta">
+            <items>
+              <MenuItem fx:id="btnAltaMaquinista" mnemonicParsing="false" onAction="#alta_maquinista" text="Maquinista" />
+                  <MenuItem fx:id="btnAltaTren" mnemonicParsing="false" onAction="#alta_tren" text="Tren" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Modificar">
+            <items>
+              <MenuItem fx:id="btnModMaquinista" mnemonicParsing="false" onAction="#mod_maquinista" text="Maquinistas" />
+                  <MenuItem fx:id="btnModTrenes" mnemonicParsing="false" onAction="#mod_trenes" text="Trenes" />
+            </items>
+          </Menu>
+            <Menu mnemonicParsing="false" text="Buscar">
+               <items>
+                  <MenuItem fx:id="btnBusqMaquinista" mnemonicParsing="false" onAction="#bus_maquinistas" text="Maquinistas" />
+                  <MenuItem fx:id="btnBusqTrenes" mnemonicParsing="false" onAction="#bus_trenes" text="Trenes" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Viajes">
+               <items>
+                  <MenuItem fx:id="btnViaje" mnemonicParsing="false" onAction="#new_viaje" text="Nuevo viaje..." />
+                  <MenuItem fx:id="btnGuardarViajes" mnemonicParsing="false" onAction="#save_viajes" text="Guardar Viajes" />
+               </items>
+            </Menu>
+        </menus>
+      </MenuBar>
+   </top>
+</BorderPane>
