@@ -99,9 +99,9 @@ public class BuscarMaquinistaController implements Initializable {
                 if (Buscar.equals(comparar)) {
                     String nom = maquinistas.get(i).getNombre();
                     String apPa = maquinistas.get(i).getApPaterno();
-                    int ced = maquinistas.get(i).getCedula();
+                    String ced = maquinistas.get(i).getCedula();
                     String esp = maquinistas.get(i).getApMaterno();
-                    int ant = maquinistas.get(i).getAntiguedad();
+                    String ant = maquinistas.get(i).getAntiguedad();
 
                     Maquinistas Busqueda = new Maquinistas(nom, apPa, ced, esp,
                             ant);

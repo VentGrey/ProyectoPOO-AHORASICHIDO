@@ -141,9 +141,9 @@ public class FXMLDocumentController implements Initializable {
             for (int i = 0; i < tam; i++) {
                 String Nombre = lector.readLine();
                 String ApPaterno = lector.readLine();
-                int Cedula = Integer.valueOf(lector.readLine());
+                String Cedula = lector.readLine();
                 String ApMaterno = lector.readLine();
-                int Antiguedad = Integer.valueOf(lector.readLine());
+                String Antiguedad = lector.readLine();
                 Maquinistas temp = new Maquinistas(Nombre, ApPaterno, Cedula, 
                         ApMaterno, Antiguedad);
                 this.Maquinistas.add(temp);

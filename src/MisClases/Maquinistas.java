@@ -7,21 +7,21 @@ package MisClases;
 public class Maquinistas {
     private String Nombre;
     private String ApPaterno;
-    private int Cedula;
+    private String Cedula;
     private String ApMaterno;
-    private int Antiguedad;
+    private String Antiguedad;
     
 
     public Maquinistas() {
     }
     
-    public Maquinistas(String Nombre, String ApPaterno, int Cedula, 
-            String ApMaterno, int Antiguedad) {
+    public Maquinistas(String Nombre, String ApPaterno, 
+            String ApMaterno, String Cedula, String Antiguedad) {
         this.Nombre = Nombre;
         this.ApPaterno = ApPaterno;
-        this.Cedula = Cedula;
         this.ApMaterno = ApMaterno;
         this.Antiguedad = Antiguedad;
+        this.Cedula = Cedula;
     }
 
     public String getNombre() {
@@ -40,11 +40,11 @@ public class Maquinistas {
         this.ApPaterno = ApPaterno;
     }
 
-    public int getCedula() {
+    public String getCedula() {
         return Cedula;
     }
 
-    public void setCedula(int Cedula) {
+    public void setCedula(String Cedula) {
         this.Cedula = Cedula;
     }
 
@@ -56,11 +56,11 @@ public class Maquinistas {
         this.ApMaterno = ApMaterno;
     }
 
-    public int getAntiguedad() {
+    public String getAntiguedad() {
         return Antiguedad;
     }
 
-    public void setAntiguedad(int Antiguedad) {
+    public void setAntiguedad(String Antiguedad) {
         this.Antiguedad = Antiguedad;
     }
 

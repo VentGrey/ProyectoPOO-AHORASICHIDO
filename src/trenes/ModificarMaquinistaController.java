@@ -129,9 +129,9 @@ public void setMaquinistas(ArrayList<Maquinistas> maquinistas) {
             // carácter 15. Quiero pensar que no es ilegal usarlo.
             String nombre = txtNombre.getText().substring(0,15);
             String apPaterno = txtApPaterno.getText().substring(0,15);
-            int cedula = Integer.valueOf(txtCedula.getText());
+            String cedula = txtCedula.getText();
             String ApMaterno = txtApMaterno.getText().substring(0,15);
-            int antiguedad = Integer.valueOf(txtAntiguedad.getText());
+            String antiguedad = txtAntiguedad.getText();
             Maquinistas nuevo = new Maquinistas(nombre, apPaterno, cedula, 
                     ApMaterno, antiguedad);
             maquinistas.add(this.count, nuevo);

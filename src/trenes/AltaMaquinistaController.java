@@ -128,41 +128,75 @@ public class AltaMaquinistaController implements Initializable {
     }
     
     @FXML
-    private void alta_maquinistas(ActionEvent event) {
-        try {
-            
-            for (int i = 0; i < maquinistas.size(); i++) {
-                
-                        int get = maquinistas.get(i).getCedula();
-                        
-                        if (get == Integer.valueOf(txtCedula.getText())) {
-                            
-                            txtCedula.setText("");
-                             Alert msgE = new Alert(Alert.AlertType.ERROR);
-                             
-                             msgE.setTitle("Error al registrar la cédula");
-                             
-                             msgE.setHeaderText("El numero de cedula no está "
-                                     + "disponible."
-                                     + "\nIntente con otro");
-                             
-                             msgE.show();                        
-                        }
-                    }
-            // Con el método substring le vamos a mochar cualquier cosa
-            // que pase de los 15 carácteres y así nos ahorramos validar
-            // pues el nombre SIEMPRE será válido bwaaahahahaha
-            String nombre = txtNombre.getText().substring(0,15);   
-            String apPaterno = txtApPaterno.getText().substring(0, 15);
-            
-            int cedula = Integer.valueOf(txtCedula.getText());
-            String apMaterno = txtApMaterno.getText().substring(0, 15);
-            int antiguedad = Integer.valueOf(txtAntiguedad.getText());
+    public void alta_maquinistas() {
+       
+            // Sacar textos de los textfield
+            String nombre = txtNombre.getText();   
+            String apPaterno = txtApPaterno.getText();
+            String cedula = txtCedula.getText();
+            String apMaterno = txtApMaterno.getText();
+            String antiguedad = txtAntiguedad.getText();
 
-            Maquinistas temporal = new Maquinistas(nombre, apPaterno, cedula,
-                    apMaterno, antiguedad);
+            Boolean Validar = true;
+            
+             if (!nombre.matches("[A-Za-z]+")){
+            Validar = false;
+            Alert Message = new Alert (Alert.AlertType.INFORMATION);
+            Message.setTitle("Error");
+            Message.setHeaderText("Nombre inválido");
+            Message.showAndWait();
+            //validate = false;
+        }
+
+        if (!apPaterno.matches("[A-Za-z]+")){
+            Validar = false;
+            Alert Message = new Alert (Alert.AlertType.INFORMATION);
+            Message.setTitle("Error");
+            Message.setHeaderText("Apellido paterno inválido");
+            Message.showAndWait();
+            //validate = false;
+        }
+
+        if (!apMaterno.matches("[A-Za-z]+")){
+            Validar = false;
+            Alert Message = new Alert (Alert.AlertType.INFORMATION);
+            Message.setTitle("Error");
+            Message.setHeaderText("Apellido materno inválido");
+            Message.showAndWait();
+            //validate = false;
+        }
+
+        if (!cedula.matches("[0-9]+")){
+            Validar = false;
+            Alert Message = new Alert (Alert.AlertType.INFORMATION);
+            Message.setTitle("Error");
+            Message.setHeaderText("Cédula inválida");
+            Message.showAndWait();
+            //validate = false;
+        } else {
+        }
+
+        if (!antiguedad.matches("[0-9]+")){
+            Validar = false;
+            Alert Message = new Alert (Alert.AlertType.INFORMATION);
+            Message.setTitle("Error");
+            Message.setHeaderText("Antigüedad inválida");
+            Message.showAndWait();
+            //validate = false;
+        }
+
+        if (Validar == true){
+            int cedulatmp = Integer.valueOf(cedula);
+            int antiguedadtmp = Integer.valueOf(antiguedad);
+            
+            // Objeto creado
+            Maquinistas temporal = new Maquinistas(nombre, apPaterno, 
+                    apMaterno, cedula, antiguedad);
             
             this.maquinistas.add(temporal);
+
+        }
+            
 
             txtNombre.setText("");
             txtApPaterno.setText("");
@@ -174,18 +208,10 @@ public class AltaMaquinistaController implements Initializable {
             msgC.setTitle("¡Exito!");
             msgC.setHeaderText("Se agregó un maquinista al registro actual");
             msgC.show();
-
-        } catch (Exception ex) {
-            Alert msgE = new Alert(Alert.AlertType.ERROR);
-            msgE.setTitle("¡ERROR!");
-            msgE.setHeaderText("Ocurrió un error al agregar un maquinista "
-                    + "revise sus datos e inténtelo de nuevo.");
-            msgE.show();
-        }
     }
 
     @FXML
-    private void cerrar_ventana() {
+    public void cerrar_ventana() {
                 this.pane_alta_maquinistas.setVisible(false);
     }
     
